@@ -1,0 +1,120 @@
+@import 'generic/*'; // Styling for bare HTML elements (like H1, A, etc.).
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600);
+$montserrat: 'Montserrat', sans-serif;
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: block;
+  font-family: $montserrat;
+  font-weight: 400;
+  background: #fafafa;
+
+  #wrapper {
+    max-width: 1230px;
+    margin: 0 auto;
+    #instagram-wrapper {
+      z-index: 2;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li {
+        width: 400px;
+        position: relative;
+        background: #fff;
+        margin:5px;
+        list-style-type: none;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+        box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.14);
+        @media (max-width: 700px) {
+      		width: 100%;
+      	}
+
+        a.header {
+          height: 40px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin: 16px;
+          text-decoration: none;
+          color:#262626;
+          img {
+            max-width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            flex-direction: row;
+          }
+          span {
+            font-size: 16px;
+            line-height: 36px;
+            margin-left: 15px;
+          }
+          span:last-child {
+            display: none;
+          }
+        }
+        span.instagram-post {
+          img {
+            width: 100%;
+          }
+        }
+        div.post-info {
+          padding: 15px 8px;
+          font-size: 1.1em;
+          line-height: 1.3em;
+          span {
+          }
+          a.like-post {
+            background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/db9f2a937bb8.png);
+            background-repeat: no-repeat;
+            background-position: -216px -352px;
+            height: 29px;
+            width: 29px;
+            display: inline-block;
+            margin: 8px 0 8px 0;
+            cursor: pointer;
+          }
+          a.comment-post {
+            background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/db9f2a937bb8.png);
+            background-repeat: no-repeat;
+            background-position: -346px -352px;
+            height: 29px;
+            width: 29px;
+            display: inline-block;
+            margin: 8px;
+            cursor: pointer;
+          }
+          span.post-likes {
+            display: block;
+            margin-bottom:10px;
+            font-size: 1.1em;
+          }
+          span.post-comments {
+            display: none;
+          }
+          span.post-headline {
+            a{
+              text-decoration: none;
+              color:#003569;
+            }
+          }
+
+          span.post-tags {
+            display: inline;
+            a {
+              color: #003569;
+              text-decoration: none
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
