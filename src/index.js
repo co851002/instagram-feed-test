@@ -2,13 +2,15 @@ import './sass/main.scss';
 // import $ from 'jquery';
 // Get acces token from http://instagram.pixelunion.net/
 var instagramAccessToken = '3595708606.1677ed0.1677ad7d687f44f886fc5bedd9c14643'
-var instagramPostsToShow = 5
+var instagramPostsToShow = 6
 
 function getInstagramFeed() {
   var accessToken = instagramAccessToken;
   $.getJSON(
     "https://api.instagram.com/v1/users/self/media/recent/?access_token=" +
       accessToken +
+      "&count="+
+      instagramPostsToShow +
       "&callback=?",
     function(insta) {
       $.each(insta.data, function(photos, src) {
@@ -45,7 +47,7 @@ function getInstagramFeed() {
           '</span></div></li>';
         $(htmlString).appendTo("#instagram-wrapper");
       });
-      console.log(insta.data);
+      //console.log(insta.data);
     }
   );
 };
