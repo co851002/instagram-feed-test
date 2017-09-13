@@ -15,59 +15,74 @@ body {
   #wrapper {
     max-width: 1199px;
     margin: 0 auto;
-    #instagram-wrapper {
+    ul#instagram-wrapper {
       z-index: 2;
       margin: 0 auto;
       display: flex;
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
-
+      a.header {
+        height: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 16px 5px;
+        text-decoration: none;
+        color:#262626;
+        img {
+          max-width: 40px;
+          height: 40px;
+          border-radius: 30px;
+          flex-direction: row;
+        }
+        span {
+          font-size: 16px;
+          line-height: 36px;
+          margin-left: 15px;
+        }
+        span:last-child {
+          display: none;
+        }
+      }
       li {
         width: 300px;
+        max-height: 90vh;
         position: relative;
         background: #fff;
-        margin:5px;
         list-style-type: none;
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
         box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.14);
         @media (max-width: 700px) {
       		width: 100%;
+          overflow: scroll
       	}
 
-        a.header {
-          height: 40px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          margin: 16px;
-          text-decoration: none;
-          color:#262626;
-          img {
-            max-width: 40px;
-            height: 40px;
-            border-radius: 30px;
-            flex-direction: row;
-          }
-          span {
-            font-size: 16px;
-            line-height: 36px;
-            margin-left: 15px;
-          }
-          span:last-child {
-            display: none;
-          }
-        }
+
         span.instagram-post {
+          width: 30%;
+          display: block;
+          float: left;
+          @media (max-width: 700px) {
+            width: 100%;
+          }
           img {
             width: 100%;
           }
         }
         div.post-info {
-          padding: 15px 8px;
           font-size: 1.1em;
           line-height: 1.3em;
+          display: inherit;
+          margin-left: 2%;
+          width: 65%;
+          float: left;
+          @media (max-width: 700px) {
+            width: 100%;
+            margin: 15px 8px;
+            margin-left: 0;
+          }
           span {
           }
           a.like-post {

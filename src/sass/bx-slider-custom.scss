@@ -1,0 +1,14 @@
+.bx-wrapper {
+  .bx-controls {
+    max-height: 5vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .bx-pager {
+      a.active{
+        background: #054788;
+      }
+
+    }
+  }
+}

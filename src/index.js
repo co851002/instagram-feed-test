@@ -1,14 +1,15 @@
 import './sass/main.scss';
+import './sass/bx-slider-custom.scss';
+
 // import $ from 'jquery';
 // Get acces token from http://instagram.pixelunion.net/
 var instagramAccessToken = '3595708606.1677ed0.1677ad7d687f44f886fc5bedd9c14643'
 var instagramPostsToShow = 6
 
 function getInstagramFeed() {
-  var accessToken = instagramAccessToken;
   $.getJSON(
     "https://api.instagram.com/v1/users/self/media/recent/?access_token=" +
-      accessToken +
+      instagramAccessToken +
       "&count="+
       instagramPostsToShow +
       "&callback=?",
@@ -48,6 +49,9 @@ function getInstagramFeed() {
         $(htmlString).appendTo("#instagram-wrapper");
       });
       //console.log(insta.data);
+      $('#instagram-wrapper').bxSlider({
+        controls:false
+      });
     }
   );
 };
@@ -78,5 +82,8 @@ function getInstagramFeed() {
 $(document).ready(function() {
 
 getInstagramFeed();
+
+
+
 
 });
