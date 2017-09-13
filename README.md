@@ -1,8 +1,8 @@
-# Instagram Clone
+# Instagram Post Slider
 
 ##Demo
 
-### http://oval-comfort.surge.sh/
+### http://better-wing.surge.sh/
 
 ## Instructions
 
